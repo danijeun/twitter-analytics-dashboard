@@ -389,6 +389,8 @@ app.clientside_callback(
     prevent_initial_call=False
 )
 
+server = app.server
+
 if __name__ == '__main__':
     app.run(debug=True)
 
