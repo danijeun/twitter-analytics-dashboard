@@ -49,22 +49,59 @@ body {
     min-width: 300px;
 }
 
-.slider-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.slider-container input[type="range"] {
-    width: 100%;
-    margin: 2px 0;
+#sentiment-slider,
+#subjectivity-slider {
+    margin: 15px 0 10px 0;
 }
 
 .slider-values {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    color: #666;
+    display: none;
+}
+
+/* noUiSlider customization to match Dash style */
+.noUi-target {
+    background: #e9ecef;
+    border: none;
+    box-shadow: none;
+    height: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.noUi-connect {
+    background: #119dff;
+}
+
+.noUi-handle {
+    border: 2px solid #119dff;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    width: 18px;
+    height: 18px;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+    display: none;
+}
+
+.noUi-tooltip {
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 11px;
+    padding: 3px 6px;
+    bottom: 28px;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 18px;
+    height: 18px;
+    right: -9px;
+    top: -7px;
 }
 
 /* Plot Container */

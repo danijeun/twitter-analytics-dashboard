@@ -83,22 +83,62 @@ function initializeControls() {
     // Add event listeners
     monthDropdown.addEventListener('change', updateVisualization);
 
-    ['sentiment-min', 'sentiment-max', 'subjectivity-min', 'subjectivity-max'].forEach(id => {
-        const slider = document.getElementById(id);
-        slider.addEventListener('input', function() {
-            document.getElementById(id + '-value').textContent = parseFloat(this.value).toFixed(2);
-            updateVisualization();
-        });
+    // Initialize sentiment slider
+    const sentimentSlider = document.getElementById('sentiment-slider');
+    noUiSlider.create(sentimentSlider, {
+        start: [-1.0, 1.0],
+        connect: true,
+        range: {
+            'min': -1.0,
+            'max': 1.0
+        },
+        step: 0.01,
+        tooltips: [
+            { to: function(value) { return value.toFixed(2); } },
+            { to: function(value) { return value.toFixed(2); } }
+        ]
     });
+
+    sentimentSlider.noUiSlider.on('update', function(values) {
+        document.getElementById('sentiment-min-value').textContent = parseFloat(values[0]).toFixed(2);
+        document.getElementById('sentiment-max-value').textContent = parseFloat(values[1]).toFixed(2);
+    });
+
+    sentimentSlider.noUiSlider.on('change', updateVisualization);
+
+    // Initialize subjectivity slider
+    const subjectivitySlider = document.getElementById('subjectivity-slider');
+    noUiSlider.create(subjectivitySlider, {
+        start: [0.0, 1.0],
+        connect: true,
+        range: {
+            'min': 0.0,
+            'max': 1.0
+        },
+        step: 0.01,
+        tooltips: [
+            { to: function(value) { return value.toFixed(2); } },
+            { to: function(value) { return value.toFixed(2); } }
+        ]
+    });
+
+    subjectivitySlider.noUiSlider.on('update', function(values) {
+        document.getElementById('subjectivity-min-value').textContent = parseFloat(values[0]).toFixed(2);
+        document.getElementById('subjectivity-max-value').textContent = parseFloat(values[1]).toFixed(2);
+    });
+
+    subjectivitySlider.noUiSlider.on('change', updateVisualization);
 }
 
 // Filter data based on controls
 function filterData() {
     const selectedMonth = document.getElementById('month-dropdown').value;
-    const sentimentMin = parseFloat(document.getElementById('sentiment-min').value);
-    const sentimentMax = parseFloat(document.getElementById('sentiment-max').value);
-    const subjectivityMin = parseFloat(document.getElementById('subjectivity-min').value);
-    const subjectivityMax = parseFloat(document.getElementById('subjectivity-max').value);
+    const sentimentValues = document.getElementById('sentiment-slider').noUiSlider.get();
+    const sentimentMin = parseFloat(sentimentValues[0]);
+    const sentimentMax = parseFloat(sentimentValues[1]);
+    const subjectivityValues = document.getElementById('subjectivity-slider').noUiSlider.get();
+    const subjectivityMin = parseFloat(subjectivityValues[0]);
+    const subjectivityMax = parseFloat(subjectivityValues[1]);
 
     filteredData = allData.filter(d =>
         d.Month === selectedMonth &&
