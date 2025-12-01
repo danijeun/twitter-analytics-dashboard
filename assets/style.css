@@ -1,0 +1,394 @@
+.dash-graph {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.dash-graph > div {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.plotly {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.js-plotly-plot {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.modebar {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.plotly .modebar {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.js-plotly-plot .plotly .modebar {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.dash-graph .modebar {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.dash-graph .js-plotly-plot .modebar {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.dash-graph .plotly .modebar {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#scatter-plot .modebar,
+#scatter-plot ~ .modebar,
+[id*="scatter-plot"] .modebar {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.dash-graph .plotly-container .modebar {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+div[class*="modebar"] {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.modebar-container {
+    right: 5px !important;
+    left: auto !important;
+    position: absolute !important;
+    top: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.modebar-group {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    position: relative !important;
+    gap: 8px !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.modebar-group:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.modebar-group > * {
+    position: static !important;
+    transform: none !important;
+}
+
+[class*="modebar"][style*="left"] {
+    left: auto !important;
+    right: 5px !important;
+}
+
+[class*="modebar"] {
+    left: auto !important;
+    right: 5px !important;
+    position: absolute !important;
+}
+
+[class*="modebar"][style] {
+    left: auto !important;
+    right: 5px !important;
+    position: absolute !important;
+}
+
+div[style*="left"][class*="modebar"] {
+    left: auto !important;
+    right: 5px !important;
+}
+
+.modebar-btn {
+    display: block !important;
+    position: static !important;
+    margin: 0 0 4px 0 !important;
+    padding: 6px !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+.modebar-btn svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    transform: scaleY(-1) !important;
+}
+
+.modebar-btn svg path {
+    transform: none !important;
+}
+
+.modebar svg {
+    transform: scaleY(-1) !important;
+}
+
+.modebar-btn svg * {
+    transform: none !important;
+}
+
+.modebar-btn[data-title],
+.modebar-btn[data-attr-mode] {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+}
+
+.modebar-btn-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    position: relative !important;
+    gap: 8px !important;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.modebar-btn-group:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.modebar-btn-group > * {
+    position: static !important;
+    transform: none !important;
+}
+
+.modebar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+svg[class*="modebar"] {
+    right: 5px !important;
+    left: auto !important;
+}
+
+.modebar[style*="left"] {
+    left: auto !important;
+    right: 5px !important;
+}
+
+*[class*="modebar"][style*="left"] {
+    left: auto !important;
+    right: 5px !important;
+    position: absolute !important;
+}
+
+.modebar--hover {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.modebar:not(.modebar--hover) {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.plotly .modebar--hover {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
+    right: 5px !important;
+    left: auto !important;
+}
+
+.plotly .xaxis .axis-title,
+.plotly .yaxis .axis-title {
+    display: none !important;
+}
+
+.js-plotly-plot .plotly .xaxis .axis-title,
+.js-plotly-plot .plotly .yaxis .axis-title {
+    display: none !important;
+}
+
+.plotly .gtitle {
+    display: none !important;
+}
+
+.js-plotly-plot .plotly .gtitle {
+    display: none !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table {
+    margin: 0 auto;
+}
+
+#app-container {
+    font-family: Arial, sans-serif;
+}
+
+.dash-spreadsheet-container {
+    margin-top: 10px;
+}
+
+.dash-table-container .row {
+    text-align: center;
+}
+
+.dash-table-container {
+    font-family: Arial, sans-serif;
+}
+
+.dash-table-container td {
+    text-align: center !important;
+}
+
+.dash-table-container .dash-cell {
+    text-align: center !important;
+}
+
+.dash-table-container .dash-cell-value {
+    text-align: center !important;
+    display: block !important;
+}
+
+.dash-table-container .cell-1-1 {
+    text-align: center !important;
+}
+
+.dash-table-container .dash-spreadsheet-inner td {
+    text-align: center !important;
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-cell {
+    text-align: center !important;
+}
+
+.dash-table-container .dash-spreadsheet-inner .dash-cell > div {
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+.dash-table-container table td {
+    text-align: center !important;
+}
+
+.dash-table-container table td div {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table tbody td {
+    text-align: center !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table tbody td div {
+    text-align: center !important;
+    justify-content: center !important;
+}
+
+.plotly .scattergl .points path.selected {
+    fill: #666666 !important;
+    stroke: #333333 !important;
+}
