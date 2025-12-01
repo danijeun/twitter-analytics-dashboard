@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Analytics Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Controls Section -->
+        <div class="controls-container">
+            <div class="control-group">
+                <label for="month-dropdown">Month</label>
+                <select id="month-dropdown"></select>
+            </div>
+
+            <div class="control-group slider-group">
+                <label for="sentiment-slider">Sentiment Score</label>
+                <div class="slider-container">
+                    <input type="range" id="sentiment-min" min="-1" max="1" step="0.01" value="-1">
+                    <input type="range" id="sentiment-max" min="-1" max="1" step="0.01" value="1">
+                    <div class="slider-values">
+                        <span id="sentiment-min-value">-1.00</span>
+                        <span id="sentiment-max-value">1.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group slider-group">
+                <label for="subjectivity-slider">Subjectivity Score</label>
+                <div class="slider-container">
+                    <input type="range" id="subjectivity-min" min="0" max="1" step="0.01" value="0">
+                    <input type="range" id="subjectivity-max" min="0" max="1" step="0.01" value="1">
+                    <div class="slider-values">
+                        <span id="subjectivity-min-value">0.00</span>
+                        <span id="subjectivity-max-value">1.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scatter Plot -->
+        <div class="plot-container">
+            <div id="scatter-plot"></div>
+        </div>
+
+        <!-- Data Table -->
+        <div class="table-container">
+            <table id="tweet-table">
+                <thead>
+                    <tr>
+                        <th>RawTweet</th>
+                    </tr>
+                </thead>
+                <tbody id="tweet-table-body">
+                </tbody>
+            </table>
+            <div id="pagination">
+                <button id="prev-page" disabled>Previous</button>
+                <span id="page-info">Page 1</span>
+                <button id="next-page">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/app.js"></script>
+</body>
+</html>
